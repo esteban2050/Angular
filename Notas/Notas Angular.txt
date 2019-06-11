@@ -1,0 +1,27 @@
+Componentes.
+Una aplicaciones de angular esta debe estar basada en muchso compoenentes (pequeñas clases que cumplen tarea especifica), como la barra lateral, menu de navegacion.....etc
+en otras palabras : son clases normales que tienen un decorador especifico
+
+Directivas estructurales.
+Son instrucciones que agregan, eliminan o reemplazan elementos HTML en el template.
+por ejemplo: 
+- *ngIf = "True", "False", se encarga de mostrar o ocultar elementos HTML en la apgina web
+- *ngfor = Se encarga de hacer repeticion de elementos HTML en nuestra pagina (las filas de una tabla)
+
+carpeta e2e: Es lo que contiene todo lo relacionado con las pruebas 
+
+carpeta node_modules:  es una carpeta de paquetes que ayudan a objetivos o fines de desarrollo; hay un script que se corre cuando la app va subirse a produccion, que borra todo lo que no es 
+necesario para su uso; es decir, solamente deja lo necesario para que pueda correr, lo que hace que la aplicacion sea menos pesada.
+Cuando se va subir el proyecto a un repositorio, no se debe subir la carpeta "node_modules", y ya cuando la transfieran o se pase a otra persona, solo se debe 
+correr el comando /* npm install */ para recuperar la carpeta "node_modules".
+
+comando para generar un nuevo componente, como el ejemplo de header, body, footer... junto con sus archivos .spect, .ts, .html y .css
+	
+		- "ng g c nombrecomponente"
+		o si se va generar en una ruta especifica:
+		- "ng g c carpeta/carpeta2/nombrecomponente"
+
+
+Estilos:
+
+cuando a un boton se le pone una clase tipo btn-block, significa que use todo el espacio de ancho que tiene
