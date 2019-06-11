@@ -21,6 +21,9 @@ comando para generar un nuevo componente, como el ejemplo de header, body, foote
 		o si se va generar en una ruta especifica:
 		- "ng g c carpeta/carpeta2/nombrecomponente"
 
+Nota, si no se desea agregar el archivo de estilos ".css", se le agrega a la sentencia "-is"
+ejemplo:
+- ng g c carpeta/carpeta2/nombrecomponente -is
 
 Estilos:
 
