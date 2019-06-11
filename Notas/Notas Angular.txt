@@ -26,5 +26,30 @@ ejemplo:
 - ng g c carpeta/carpeta2/nombrecomponente -is
 
 Estilos:
+*cuando a un boton se le pone una clase tipo btn-block, significa que use todo el espacio de ancho que tiene
+*para dar efecto a los link del navbar, para que puedan aparecer blancos como seleccionados, se le debe agregar a todos los <li> de la lista, el atributo :  routerLinkActive="active"
+ejemplo:
 
-cuando a un boton se le pone una clase tipo btn-block, significa que use todo el espacio de ancho que tiene
+<li class="nav-item" routerLinkActive="active">
+     <a class="nav-link" [routerLink]="['home']">Home</a>
+</li>
+
+Rutas: para poder colocar las rutas a donde quiero navegar por las diferentes opciones, solo se debe crear un archivo app.routes.ts,
+el cual lleva importado los diferentes componentes a los que quiero acceder.. en el ejemplo de la aplicacion de comics, esta la pagina home, heroes, about.
+ejemplo de como seria la clase de rutas : 
+
+import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { AboutComponent } from './components/about/about.component';
+
+const APP_ROUTES: Routes = [
+    { path: 'home', component: HomeComponent },
+    { path: 'heroes', component: HeroesComponent },
+    { path: 'about', component: AboutComponent },
+    { path: '**', pathMatch: 'full', redirectTo: 'home'}
+];
+
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+
+-en el archivo "app.module.ts", se añaden los servicios que van a usarse, en la parte que se declara la lista "providers"
