@@ -53,3 +53,8 @@ const APP_ROUTES: Routes = [
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
 
 -en el archivo "app.module.ts", se añaden los servicios que van a usarse, en la parte que se declara la lista "providers"
+
+-Para usar las variables del servicio, en el caso de heroes.service; se puede acceder de dos formas;
+1. si esta dentro de la etiqueta HTML, se puede hacer de dos formas: poner el objeto.atributo, y a la vez toca poner el atributo dentro de corchetes, ejemplo: <img [src]="heroe.img" class="card-img-top img-fluid" [alt]="heroe.nombre">
+o hacerlo como en el segundo paso.
+2. si esta por fuera de la etiqueta, tiene que ser con doble {{}}, ejemplo: {{heroe.nombre}} // <p class="card-text">{{ heroe.bio }}</p> 
